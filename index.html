@@ -8,6 +8,41 @@
        <h1>Página Web de productos químicos para la conservación de las computadoras. Actividad transversal con el módulo de programación web o arquitectura de computadoras</h1>
 	<!---<p>PREPA 17 SEMS UDEG</p><b></b><p>REACCIONES QUIMICAS</P><B></B><P>COMPETENCIAS: CDb-CsEx8:Explica el funcionamiento de máquinas de uso común a partir de nociones científicas.</P>
 	<B></B><P>JUAN MANUEL GERVACIO SILVA, KENIA NAIROBI VAZQUEZ DIAZ</P><B></B><P> 5A MATUTINO BTDS</P><B></B><P>MAESTRA: BEATRIZ ALCARAZ</P></p>---->
+	    	  <head>
+    <style>
+      .clock { 
+        align-items: center;
+        height: 3vh;
+        font-size: 1.5em;
+        font-family: Verdana;
+        font-weight: bold;
+        color: #333;
+      }
+      .number {
+        margin: 0 0.0em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock">
+      <span class="number" id="hour">00</span>
+      <span>:</span>
+      <span class="number" id="minute">00</span>
+      <span>:</span>
+      <span class="number" id="second">00</span>
+    </div>
+    <script>
+      function updateClock() {
+        const now = new Date();
+        const hour = now.getHours().toString().padStart(2, '0');
+        const minute = now.getMinutes().toString().padStart(2, '0');
+        const second = now.getSeconds().toString().padStart(2, '0');
+        document.getElementById('hour').textContent = hour;
+        document.getElementById('minute').textContent = minute;
+        document.getElementById('second').textContent = second;
+      }
+      setInterval(updateClock, 1000);
+    </script>
 	</header><br></br>
 	<div class="cuadro-texto">
     <h2>Que es una reaccion quimica</h2>
